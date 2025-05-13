@@ -40,6 +40,10 @@ Grafik kedua yang memiliki lonjakan pada browser RabbitMQ mengukur *rate* atau k
 
 
 ## Bonus
-### Sending & Processing Event
+### Sending & Processing Event (Cloud)
 ![Bonus1](BonusSendingProcessingEvent.png)
 Sama seperti di `localhost`, jika *subscriber* dan *publisher* sudah disambungkan ke *message broker* yang sama maka akan terjadi pengiriman dan penerimaan pesan. Perbedaan yang *noticeable* adalah tidak dapat meng-*spam* *run* publisher dalam waktu yang singkat, karena sekarang terdapat delay dalam menjalakannya. Hal itu disebabkan *publisher* mencoba menyambungkan dirinya dengan RabbitMQ yang berada di cloud dan tidak secepat menyabungkand dirinya dengan *localhost*.
+
+### Monitoring Chart on RabbitMQ Browser (Cloud)
+![Bonus2](BonusMonitoringChart.png)
+Tidak terdapat perbedaan yang banyak pada monitoring chart di *localhost* dan *cloud*. Jika *publisher* dijalankan sekali maka akan terjadi lonjakan dalam mengirim 5 pesan yang kemudian akan diterima oleh *subscriber*.
