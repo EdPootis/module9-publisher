@@ -29,3 +29,7 @@ b. The url of: “`amqp://guest:guest@localhost:5672`” is the same as in the s
 
 ### Running RabbitMQ as message broker.
 ![Running RabbitMQ as message broker.](RunningRabbitMQ.png)
+
+### Sending & Processing Event
+![Sending & Processing Event](SendingProcessingEvent.png)
+Saat *subscriber* sudah terkoneksi ke RabbitMQ dan *publisher* dijalankan, maka publisher akan mengirim 5 pesan/data ke *broker* yang kemudian subscriber akan terima.
