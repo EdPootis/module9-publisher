@@ -26,3 +26,6 @@ fn main() {
 
 b. The url of: “`amqp://guest:guest@localhost:5672`” is the same as in the subscriber program, what does it mean?
 - `amqp://guest:guest@localhost:5672` adalah URL koneksi yang digunakan oleh aplikasi *publisher* dan *subscriber*. Hal ini berarti bahwa keduanya akan terhubung ke *instance message broker* RabbitMQ yang sama juga. Dengan ini, *publisher* dapat mengirim/*publish* pesan/data ke *message broker* dan *subscriber* akan menerima pesan yang dikirim tersebut dari *broker*.
+
+### Running RabbitMQ as message broker.
+![Running RabbitMQ as message broker.](RunningRabbitMQ.png)
