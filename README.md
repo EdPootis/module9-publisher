@@ -33,3 +33,7 @@ b. The url of: “`amqp://guest:guest@localhost:5672`” is the same as in the s
 ### Sending & Processing Event
 ![Sending & Processing Event](SendingProcessingEvent.png)
 Saat *subscriber* sudah terkoneksi ke RabbitMQ dan *publisher* dijalankan, maka publisher akan mengirim 5 pesan/data ke *broker* yang kemudian subscriber akan terima.
+
+### Monitoring Chart on RabbitMQ Browser
+![Monitoring Image](MonitoringChart.png)
+Grafik kedua yang memiliki lonjakan pada browser RabbitMQ mengukur *rate* atau kecepatan pesan/data yang dikirim dalam interval tertentu. Pada gambar terdapat lonjakan garis kuning dan garis ungu. Garis ungu menandakan pesan yang mendapat *consumer acknowledgement* atau diterima, sementara garis kuning menandakan pesan yang di-*publish* atau dikirim. Lonjakan kedua garis tersebut terjadi karena *publisher* di run sehingga dari 0 pesan yang di*publish* dan diterima *subscriber* menjadi 5 atau lebih jika dijalankan beberapa kali dalam waktu yang cepat.
