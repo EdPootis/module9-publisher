@@ -37,3 +37,9 @@ Saat *subscriber* sudah terkoneksi ke RabbitMQ dan *publisher* dijalankan, maka 
 ### Monitoring Chart on RabbitMQ Browser
 ![Monitoring Image](MonitoringChart.png)
 Grafik kedua yang memiliki lonjakan pada browser RabbitMQ mengukur *rate* atau kecepatan pesan/data yang dikirim dalam interval tertentu. Pada gambar terdapat lonjakan garis kuning dan garis ungu. Garis ungu menandakan pesan yang mendapat *consumer acknowledgement* atau diterima, sementara garis kuning menandakan pesan yang di-*publish* atau dikirim. Lonjakan kedua garis tersebut terjadi karena *publisher* di run sehingga dari 0 pesan yang di*publish* dan diterima *subscriber* menjadi 5 atau lebih jika dijalankan beberapa kali dalam waktu yang cepat.
+
+
+## Bonus
+### Sending & Processing Event
+![Bonus1](BonusSendingProcessingEvent.png)
+Sama seperti di `localhost`, jika *subscriber* dan *publisher* sudah disambungkan ke *message broker* yang sama maka akan terjadi pengiriman dan penerimaan pesan. Perbedaan yang *noticeable* adalah tidak dapat meng-*spam* *run* publisher dalam waktu yang singkat, karena sekarang terdapat delay dalam menjalakannya. Hal itu disebabkan *publisher* mencoba menyambungkan dirinya dengan RabbitMQ yang berada di cloud dan tidak secepat menyabungkand dirinya dengan *localhost*.
